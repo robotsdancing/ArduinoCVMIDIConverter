@@ -1,7 +1,11 @@
 # ArduinoCVMIDIConverter
 This is a MIDI/CV converter I made using an Arduino for synthesizers using Hz/V. It uses callbacksin the Arduino MIDI library to then generate a tone and voltage(using tone() and FastPWMDac) to trigger notes on a synthesizer as well as tell the synthesizer what notes to play. Be warned that this only works with synthesizers that trigger notes via external audio input and this does not comply to Yamaha's standard for CV/Gate on the Yamaha CS-5(which is the synthesizer this was tested with/originally made for) 
+
+
 Demo Video link:
 http://bit.ly/2zYSFer
+
+
 How to Use:
 1. Download the Hairless MIDI bridge, and a virtual MIDI port(I used loopMIDI, which is recommended by Hairless).
   Hairless MIDI site:http://projectgus.github.io/hairless-midiserial/
