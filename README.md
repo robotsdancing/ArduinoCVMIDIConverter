@@ -1,6 +1,7 @@
 # ArduinoCVMIDIConverter
 This is a MIDI/CV converter I made using an Arduino for synthesizers using Hz/V. It uses callbacksin the Arduino MIDI library to then generate a tone and voltage(using tone() and FastPWMDac) to trigger notes on a synthesizer as well as tell the synthesizer what notes to play. Be warned that this only works with synthesizers that trigger notes via external audio input and this does not comply to Yamaha's standard for CV/Gate on the Yamaha CS-5(which is the synthesizer this was tested with/originally made for) 
-
+Demo Video link:
+http://bit.ly/2zYSFer
 How to Use:
 1. Download the Hairless MIDI bridge, and a virtual MIDI port(I used loopMIDI, which is recommended by Hairless).
   Hairless MIDI site:http://projectgus.github.io/hairless-midiserial/
@@ -8,7 +9,7 @@ How to Use:
 2. Upload arduino code(CVMIDIConverter.ino) to arduino, and attach 1/4"("Guitar cable") mono jacks for tone output and CV output.
   The tone output I have set up with a 100 Ohm 5% resistor, you can toy around with different resistor values if you so choose, it might affect the trigger levels on a synthesizer though. The resistor I soldered in line with the wire for the output pin(pin 6).
   The jack for CV output is a bit more complicated of a circuit, which is described here(http://bit.ly/2v6xoc7) for the most part but I made some changes(most noteably to have two grounds, one of them is the ground for the 1/4" mono jack and the other is the ground for the capacitor, photos will be uploaded to reference my somewhat dubious quality soldering/circuit skills).
-3. Set up MIDI output in favorite DAW to the virtual MIDI port you used, run Hairless MIDI bridge, and connect the audio output to the audio input of the synthesizer, and the CV output of the Arduino to the CV input of the synthesizer(although for interesting duophonic type patterns on a monophonic synthesizer CV can be chosen to not be attached and repeating notes triggered can be used for a droning bassline or set of high notes droning on, such as in this video http://bit.ly/2hBvM9o).
+3. Set up MIDI output in favorite DAW to the virtual MIDI port you used, run Hairless MIDI bridge, and connect the audio output to the audio input of the synthesizer, and the CV output of the Arduino to the CV input of the synthesizer.
 4. Adjust the input trigger settings.
   For my synthesizer(a Yamaha CS-5) notes can be triggered via external audio input, as well as on some other synthesizers. For a Yamaha CS-5 it requires the trigger level to be dropped down pretty low(about between 0 and 1 out of 10) for it to trigger reliably. This triggering may be different based on different synthesizers and if one chooses to use a different resistor for the tone output.
 
