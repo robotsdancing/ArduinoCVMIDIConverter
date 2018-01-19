@@ -21,7 +21,7 @@ MIDI_CREATE_DEFAULT_INSTANCE();
 void handleNoteOff(byte channel, byte note, byte velocity);
 void handleNoteOn(byte channel, byte note, byte velocity);
 void setup(){
-   fastPWMdac.init(cvPin,8);
+   fastPWMdac.init(cvPin,10);
    MIDI.begin(1);  // Listen to all incoming messages
    Serial.begin(115200);
    pinMode(subOscPin,OUTPUT);
