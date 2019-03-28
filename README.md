@@ -18,7 +18,9 @@ How to Use:
   For my synthesizer(a Yamaha CS-5) notes can be triggered via external audio input, as well as on some other synthesizers. For a Yamaha CS-5 it requires the trigger level to be dropped down pretty low(about between 0 and 1 out of 10) for it to trigger reliably. This triggering may be different based on different synthesizers and if one chooses to use a different resistor for the tone output.
 
 Ideas for changes:
-1. Useage with other synthesizers:
+1. Usage with other synthesizers:
   Since this was originally designed for use with a Yamaha CS-5 it may not work entirely the same with other synthesizers that use Hz/V(such as the Korg MS-20,Korg MS-10 or any duophonic functionality that the Yamaha CS-15 and CS-30/30L have) and I recommend that if anyone is intending to use this with a different Hz/V synthesizer to branch the project and change things so that they are more functional with your specific synthesizer.
-2. Testing different resistor values for the tone output/changing DAC circuitry:
-  The tone output is not very loud, or as some people refer to "hot", as other sources of audio, so I will test different resistors in the tone circuit, first with headphones to make sure that it isn't loud enough to cause issues, and then with the synthesizer to find a happy medium of amplitude for the triggering audio without causing distortion of the source audio. The DAC circuitry may also be changed if I can find anything that will have a smaller amount of delay.
+2. Testing different resistor values for the tone output:
+  The tone output is not very loud, or as some people refer to "hot", as other sources of audio, so I will test different resistors in the tone circuit, first with headphones to make sure that it isn't loud enough to cause issues, and then with the synthesizer to find a happy medium of amplitude for the triggering audio without causing distortion of the source audio.
+3. Changing DAC circuitry:
+   The DAC circuitry may also be changed if I can find anything that will have a smaller amount of delay and higher resolution.
